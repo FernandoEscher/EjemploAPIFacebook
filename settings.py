@@ -67,7 +67,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'EjemploAPIFacebook.urls'
+ROOT_URLCONF = 'urls'
 
 
 ROOT_PATH = os.path.dirname(__file__)
