@@ -9,7 +9,7 @@
 
 #pic{
    border: 5px solid #c3d9ff;
-	float:left;
+   float:left;
 }
 
 #pic_div{
@@ -38,7 +38,7 @@
 #profile_main table{
   border-collapse:collapse;
   width:30em;
-  border-top: 5px solid #fcaf17;
+  //border-top: 5px solid #fcaf17;
   
 }
 
@@ -48,8 +48,4 @@
 
 #profile_main h3{
   color:#d7df21;
-}
-
-#profile_footer{
- clear:both;
 }
