@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" /> 
+         <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" />
+    </head>
+    
+    
+    <body>
+
+    <div id="main_content">
+    	<div id="profile_left">
+		
+    	<div id="pic_div">
+    		{%if pic%}
+				<img id="pic" src="{{pic}}"/>
+			{%else%}
+				<img id="pic" src="/static/images/escolarea_profile_pic.png"/>
+			{%endif%}
+		</div>
+	</div>
+	<div id="profile_main">
+		<h1>{{name}}</h1>
+		<h3>Basic information</h3>
+		<table id="basic_info">
+			<tbody>
+			{% if country and city%}
+			<tr>
+				<td><strong>Location</strong></td>
+				<td>{{city}}, {{country}}</td>
+			</tr>
+			{% endif %}
+			
+			{% if bday %}
+			<tr>
+				<td><strong>Birthday</strong></td>
+				<td>{{bday}}</td>
+			</tr>
+			{% endif %}
+			
+			{% if sex %}
+			<tr>
+				<td><strong>Sex</strong></td>
+				<td>{{sex}}</td>
+			</tr>
+			{% endif %}
+			</tbody>
+		</table>
+		
+		<h3>Friends info</h3>
+		{%autoescape off%}
+		<ul>
+		{%for friend in friends%}
+			<li>{{friend}}</li>
+		{%endfor%}
+		</ul>
+		{%endautoescape%}
+		
+		<h3>Status update</h3>
+		<form action="/set-status/{{uid}}/" method="POST">
+			Status: <input name="status" type="text"/>
+			<input type="submit" value="ok"/>
+		</form>
+	</div>
+	<div id="profile_footer">
+	&nbsp;
+	</div>
+    	</div>
+    </body>

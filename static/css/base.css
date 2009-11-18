@@ -1,0 +1,55 @@
+#profile_left{
+    float:left;
+}
+
+#profile_main{
+  padding: 0px 0px 0px 20px;
+  float:left;
+}
+
+#pic{
+   border: 5px solid #c3d9ff;
+	float:left;
+}
+
+#pic_div{
+    padding: 20px 10px 10px 20px;
+}
+
+#profile_left ul{
+  position:relative;
+  top:5px;
+  text-indent:10px;
+  list-style-type: none;
+  clear:both;
+}
+
+#profile_left ul a:link, #profile_left ul a:visited{
+   color:blue;
+   text-decoration:none;
+}
+
+#profile_left ul a:hover, #profile_left ul a:active{
+   font-weight:bold;
+   background-color:#c3d9ff;
+
+}
+
+#profile_main table{
+  border-collapse:collapse;
+  width:30em;
+  border-top: 5px solid #fcaf17;
+  
+}
+
+#profile_main td{
+  padding: 0.1em 1em;
+}
+
+#profile_main h3{
+  color:#d7df21;
+}
+
+#profile_footer{
+ clear:both;
+}
